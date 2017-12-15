@@ -1,0 +1,128 @@
+[
+	[
+		{
+			"title": "美食",
+			"icon": "0101.png"
+		},
+		{
+			"title": "电影",
+			"icon": "0102.png"
+		},
+		{
+			"title": "酒店",
+			"icon": "0103.png"
+		},
+		{
+			"title": "休闲娱乐",
+			"icon": "0104.png"
+		},
+		{
+			"title": "外卖",
+			"icon": "0105.png"
+		},
+		{
+			"title": "火锅",
+			"icon": "0106.png"
+		},
+		{
+			"title": "丽人",
+			"icon": "0107.png"
+		},
+		{
+			"title": "度假出行",
+			"icon": "0108.png"
+		},
+		{
+			"title": "足疗按摩",
+			"icon": "0109.png"
+		},
+		{
+			"title": "周边游",
+			"icon": "0110.png"
+		}
+	],
+	[
+		{
+			"title": "景点",
+			"icon": "0201.png"
+		},
+		{
+			"title": "KTV",
+			"icon": "0202.png"
+		},
+		{
+			"title": "购物",
+			"icon": "0203.png"
+		},
+		{
+			"title": "生活服务",
+			"icon": "0204.png"
+		},
+		{
+			"title": "运动健身",
+			"icon": "0205.png"
+		},
+		{
+			"title": "美发",
+			"icon": "0206.png"
+		},
+		{
+			"title": "亲子",
+			"icon": "0207.png"
+		},
+		{
+			"title": "小吃快餐",
+			"icon": "0208.png"
+		},
+		{
+			"title": "自助餐",
+			"icon": "0209.png"
+		},
+		{
+			"title": "酒吧",
+			"icon": "0210.png"
+		}
+	],
+	[
+		{
+			"title": "日本菜",
+			"icon": "0301.png"
+		},
+		{
+			"title": "SPA",
+			"icon": "0302.png"
+		},
+		{
+			"title": "结婚",
+			"icon": "0303.png"
+		},
+		{
+			"title": "学习培训",
+			"icon": "0304.png"
+		},
+		{
+			"title": "西餐",
+			"icon": "0305.png"
+		},
+		{
+			"title": "火车机票",
+			"icon": "0306.png"
+		},
+		{
+			"title": "烧烤",
+			"icon": "0307.png"
+		},
+		{
+			"title": "家装",
+			"icon": "0308.png"
+		},
+		{
+			"title": "宠物",
+			"icon": "0309.png"
+		},
+		{
+			"title": "全部分类",
+			"icon": "0310.png"
+		}
+	]
+]
