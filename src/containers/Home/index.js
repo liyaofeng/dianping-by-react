@@ -12,10 +12,10 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div className="home">
-				<HomeHeader />
 				<HomeCategory />
 				<HomeOnsale />
 				<HomeLike />
+				<HomeHeader />
 			</div>
 		)
 	}

@@ -1,0 +1,28 @@
+.bar {
+	width: 100%;
+	height: 46px;
+
+	background: #F35241;
+	color: #fff;
+}
+
+.backIcon {
+	position: absolute;
+	top: 2px;
+	left: 0px;
+	width: 50px;
+	height: 44px;
+	margin-left: 8px;
+	line-height: 44px;
+	text-align: left;
+	font-size: 16px;
+}
+
+.titleView {
+	line-height: 44px;
+	font-size: 14px;
+	padding-top: 2px;
+	text-align: center;
+
+	color: #fff;
+}

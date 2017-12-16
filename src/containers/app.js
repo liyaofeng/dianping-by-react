@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch, Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -23,11 +23,6 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<ul>
-					<Link to="/city"><li>city</li></Link>
-					<Link to="/user"><li>user</li></Link>
-					<Link to="/search"><li>search</li></Link>
-				</ul>
 				<Switch>
 					<Route path="/" component={Home} exact/>
 					<Route path="/city" component={City} />
@@ -58,4 +53,4 @@ function mapDispatchToProps(dispatch) {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))

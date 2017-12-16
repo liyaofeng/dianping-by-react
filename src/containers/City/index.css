@@ -1,0 +1,47 @@
+.cityViewCurrentCity {
+	height: 120px;
+	text-align: center;
+	line-height: 120px;
+	background: #fff;
+	border-bottom: 0.5px solid #eee;
+}
+
+.cityViewCity {
+	font-size: 30px;
+	color: #333;
+}
+
+.cityViewLocationType {
+	margin-left: 8px;
+	color: #cccddd;
+	font-size: 15px;
+}
+
+.cityViewHotCity {
+	padding-top: 18px;
+	padding-left: 24px;
+	padding-right: 24px;
+	background: #fff;
+}
+
+.cityViewHotCityTitle {
+	color: #333;
+	font-size: 14px;
+}
+
+.cityViewHotCitySupView {
+	display: flex;
+	margin-top: 16px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.cityViewCityItem {
+	width: 28%;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	margin-bottom: 16px;
+	border: 0.5px solid #eee;
+	font-size: 14px;
+}
