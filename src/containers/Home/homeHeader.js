@@ -1,18 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import '../../iconfonts/iconfontHeader/iconfont.css'
 import './homeHeader.css'
 
 class HomeHeader extends React.Component {
-
 	render() {
 		return (
 			<div className="header">
+				<Link to='/city'>
 				<div className="city">
 					{this.props.cityName}
 					<b class="icon iconfont headerIcon">&#xe6a6;</b>
 				</div>
+				</Link>
 				<div className="search">
 					<b class="icon iconfont headerIcon">&#xe6ac;</b>
 					<input placeholder="请输入关键字" />

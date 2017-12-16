@@ -38,6 +38,10 @@ class HomeLike extends React.Component {
 	}
 
 	loadLike() {
+		if (this.state.moreStatus == HOMELIKEMORE_STATUE.statusLoading) {
+			return
+		}
+		
 		this.setState({
 			moreStatus: HOMELIKEMORE_STATUE.statusLoading
 		})
