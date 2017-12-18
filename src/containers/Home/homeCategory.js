@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactSwipe from 'react-swipe'
 import ClassNames from 'classnames'
+import { Route, Link, withRouter } from 'react-router-dom'
 
 import './homeCategory.css'
 
+import Search from '../Search/index'
 import categoryJson from '../../configs/category.json'
 
 class HomeCategory extends React.Component {
@@ -30,10 +32,10 @@ class HomeCategory extends React.Component {
 			let pageArr = []
 			arr.forEach((category, index) => {
 				pageArr.push(
-					<div key={index} className="categoryItem">
+					<Link to={'/search/' + category.title} key={index} className="categoryItem" style={{textDecoration:"none"}}>
 						<img className="categoryIcon" src={require('../../images/category/' + category.icon)} />
 						{category.title}
-					</div>
+					</Link>
 				)
 			})
 			categoryArr.push(
@@ -58,4 +60,4 @@ class HomeCategory extends React.Component {
 	}
 }
 
-export default HomeCategory
+export default withRouter(HomeCategory)

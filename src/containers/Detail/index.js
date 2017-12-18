@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactSwipe from 'react-swipe'
+import { Link, withRouter } from 'react-router-dom'
 
 class Detail extends React.Component {
 
@@ -11,4 +13,4 @@ class Detail extends React.Component {
 	}
 }
 
-export default Detail;
+export default withRouter(Detail)

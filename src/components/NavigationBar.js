@@ -1,5 +1,5 @@
 import React from 'react'
-import createHistory from 'history/createBrowserHistory';
+import { withRouter } from 'react-router-dom'
 
 import '../iconfonts/iconfont/iconfont.css'
 import './NavigationBar.css'
@@ -8,7 +8,7 @@ class NavigationBar extends React.Component {
 	render() {
 		return (
 			<div className="bar">
-				<b className="icon iconfont backIcon" onClick={this.back}>&#xe697;</b>
+				<b className="icon iconfont backIcon" onClick={this.back.bind(this)}>&#xe697;</b>
 				<div className="titleView">
 					{this.props.title}
 				</div>
@@ -17,8 +17,8 @@ class NavigationBar extends React.Component {
 	}
 
 	back() {
-		createHistory().goBack()
+		this.props.history.goBack()
 	}
 }
 
-export default NavigationBar;
+export default withRouter(NavigationBar)

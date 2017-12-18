@@ -27,8 +27,9 @@ class App extends React.Component {
 					<Route path="/" component={Home} exact/>
 					<Route path="/city" component={City} />
 					<Route path="/user" component={User} />
-					<Route path="/search" component={Search} />
-					<Route path="/detail" component={Detail} />
+					<Route path="/detail/:id" component={Detail} />
+					<Route path="/search/:keyword?" component={Search} />
+					<Route path="*" component={NotFound} />
 				</Switch>
 			</div>
 		)

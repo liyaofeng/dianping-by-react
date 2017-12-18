@@ -17,13 +17,20 @@ class HomeHeader extends React.Component {
 				</Link>
 				<div className="search">
 					<b className="icon iconfont headerIcon">&#xe6ac;</b>
-					<input placeholder="请输入关键字" />
+					<input type="search" placeholder="请输入关键字" onKeyPress={this.pressSearchInputKeyboard.bind(this)}/>
 				</div>
 				<div className="personal">
 	                <b class="icon iconfont headerIcon">&#xe6b8;</b>
                 </div>
 			</div>
 		)
+	}
+
+	pressSearchInputKeyboard(event) {
+		console.log(event.key)
+		if (event.key === 'Enter') {
+			this.props.history.push('/search/' + event.target.value)
+		}
 	}
 }
 

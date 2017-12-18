@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import createHistory from 'history/createBrowserHistory'
 
 import './homeLike.css'
 
@@ -11,6 +12,11 @@ import { requestLike } from '../../services/home'
 class HomeLike extends React.Component {
 	constructor(props) {
 		super(props);
+
+	    const { getInstance } = props
+	    if (typeof getInstance === 'function') {
+	      getInstance(this)
+	    }
 
 		this.state = {
 			page: 0,
@@ -23,7 +29,9 @@ class HomeLike extends React.Component {
 		let itemArr = []
 		this.state.likeArr.forEach((likeItem, index) => {
 			itemArr.push(
-				<HomeLikeItem key={index} data={likeItem} />
+				<div key={index} onClick={this.clickItem.bind(this, likeItem.id)}>
+					<HomeLikeItem data={likeItem} />
+				</div>
 			)
 		})
 
@@ -66,6 +74,20 @@ class HomeLike extends React.Component {
 				})
 			})
 	}
+
+	reload() {
+		this.setState({
+			moreStatus: HOMELIKEMORE_STATUE.statusNormal,
+			likeArr: [],
+			page: 0
+		}) 
+
+		this.loadLike()
+	}
+
+	clickItem(id) {
+		this.props.history.push('/detail/' + id)
+	}
 }
 
 function mapStateToProps(state) {
@@ -79,8 +101,7 @@ function mapDispatchToProps(dispatch) {
 	}
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeLike))
-// export default HomeLike
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeLike, { withRef: true }))
 
 class HomeLikeItem extends React.Component {
 	render() {
