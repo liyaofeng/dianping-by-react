@@ -1,13 +1,18 @@
-import React from 'react';
-import ReactSwipe from 'react-swipe'
+import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
+
+import './index.css'
+
+import NavigatioinBar from '../../components/NavigationBar'
+import GoodsDetailHeader from './goodsDetailHeader'
 
 class Detail extends React.Component {
 
 	render() {
 		return (
 			<div>
-				Detail
+				<NavigatioinBar title='团购详情'/>
+				<GoodsDetailHeader />
 			</div>
 		)
 	}
