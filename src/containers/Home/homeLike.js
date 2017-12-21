@@ -103,7 +103,7 @@ function mapDispatchToProps(dispatch) {
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeLike, { withRef: true }))
 
-class HomeLikeItem extends React.Component {
+export class HomeLikeItem extends React.Component {
 	render() {
 		return (
 			<div className="homeLikeItem">

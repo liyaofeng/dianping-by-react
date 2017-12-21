@@ -8,17 +8,19 @@ class NavigationBar extends React.Component {
 	render() {
 		return (
 			<div className="bar">
-				<b className="icon iconfont backIcon" onClick={this.back.bind(this)}>&#xe697;</b>
+				<b className="icon iconfont backIcon" onClick={this.props.click.bind(this)}>&#xe697;</b>
 				<div className="titleView">
 					{this.props.title}
 				</div>
 			</div>
 		)
 	}
-
-	back() {
-		this.props.history.goBack()
-	}
 }
 
 export default withRouter(NavigationBar)
+
+NavigationBar.defaultProps = {
+	click: function() {
+		this.props.history.goBack()
+	}
+};

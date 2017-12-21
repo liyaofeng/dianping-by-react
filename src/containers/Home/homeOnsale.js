@@ -1,6 +1,7 @@
 import React from 'react'
 import ClassNames from 'classnames'
 import Spinner from 'react-spinkit'
+import { withRouter } from 'react-router-dom'
 
 import './homeOnsale.css'
 
@@ -34,7 +35,7 @@ class HomeCategory extends React.Component {
 				}
 				saleArr.push(
 					// <div key={index} className={ClassNames("onsaleItem", {onsaleItemBottomLine: index < 3, onsaleItemRightLine: index % 3 != 2})}>
-					<div key={index} className={ClassNames("onsaleItem")}>
+					<div key={index} className={ClassNames("onsaleItem")} onClick={this.click.bind(this)}>
 						<h4>{sale.title}</h4>
 						<div>{sale.subTitle}</div>
 						<img src={sale.img} />
@@ -75,6 +76,10 @@ class HomeCategory extends React.Component {
 				})
 			})
 	}
+
+	click() {
+		this.props.history.push('/business/0')
+	}
 }
 
-export default HomeCategory
+export default withRouter(HomeCategory)

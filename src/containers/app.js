@@ -8,6 +8,7 @@ import City from './City/index'
 import User from './User/index'
 import Search from './Search/index'
 import Detail from './Detail/index'
+import Business from './Business/index'
 import NotFound from './404'
 
 import LocalStorage from '../utils/localStorage'
@@ -27,6 +28,7 @@ class App extends React.Component {
 					<Route path="/" component={Home} exact/>
 					<Route path="/city" component={City} />
 					<Route path="/user" component={User} />
+					<Route path="/business/:id" component={Business} />
 					<Route path="/detail/:id" component={Detail} />
 					<Route path="/search/:keyword?" component={Search} />
 					<Route path="*" component={NotFound} />
